@@ -23,6 +23,7 @@
 
 .menu-bar_item > ul {
   display: flex;
+  margin-right: 169px;
 }
 
 .menu-bar_item > ul > li {
@@ -33,13 +34,41 @@
   align-items: center;
 }
 
-.menu-bar_item > ul > li > a > img {
-  margin-right: 10px;
-}
-
 .menu-bar_item > ul > li > a {
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-decoration: none;
+  color: rgb(7, 7, 7);
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+.menu-bar_item > ul > li > a:not(:has(img)):before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: blue;
+  transition: .3s;
+}
+
+.menu-bar_item > ul > li > a:not(:has(img)):hover:before{
+  width: 100%;
+}
+
+.menu-bar_item > ul > li > a:hover {
+  font-weight: 645;
+}
+
+.menu-bar_item > ul > li > a > img {
+  margin-right: 10px;
+}
+
+
+
