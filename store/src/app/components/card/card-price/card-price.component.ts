@@ -7,12 +7,12 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CardPriceComponent implements OnInit {
 
-  constructor() { }
-
   @Input()
   gameType: string = 'Digital PS4'
   @Input()
   gamePrice: string = 'RS 129,90'
+
+  constructor() { }
 
   ngOnInit(): void {
   }
